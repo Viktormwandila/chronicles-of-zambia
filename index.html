@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chronicles of Zambia Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #004d40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: #00332d;
+            color: white;
+            padding: 20px;
+            width: 250px;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #004d40;
+            border-radius: 5px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #004d40;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        .button {
+            background-color: #004d40;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #00695c;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Chronicles of Zambia - Dashboard</h1>
+</header>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Sections</h2>
+        <ul>
+            <li><a href="#" onclick="showSection('overview')">Overview</a></li>
+            <li><a href="#" onclick="showSection('economics')">Economics</a></li>
+            <li><a href="#" onclick="showSection('health')">Health</a></li>
+            <li><a href="#" onclick="showSection('technology')">Technology</a></li>
+            <li><a href="#" onclick="showSection('government')">Government</a></li>
+            <li><a href="#" onclick="showSection('culture')">Cultural Section</a></li>
+            <li><a href="#" onclick="showSection('editorial')">Editorial Guidelines</a></li>
+            <li><a href="#" onclick="showSection('ethics')">Code of Ethics</a></li>
+            <li><a href="#" onclick="showSection('submission')">Submission & Citation</a></li>
+            <li><a href="#" onclick="showSection('privacy')">Privacy Policy</a></li>
+            <li><a href="#" onclick="showSection('terms')">Terms & Conditions</a></li>
+            <li><a href="#" onclick="showSection('contract')">Writer's Agreement</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Overview Section -->
+        <div id="overview" class="section active">
+            <h2>Newspaper Overview</h2>
+            <p>
+                Welcome to <strong>The Chronicles of Zambia</strong>, a newspaper designed to provide insightful, data-driven journalism focused on empowering Zambian citizens with the knowledge they need to understand their country's role on the global stage.
+            </p>
+            <p>
+                Our mission is to bridge the gap in the current news landscape by offering deep analysis in various sectors including:
+            </p>
+            <ul>
+                <li>Economics</li>
+                <li>Health</li>
+                <li>Technology</li>
+                <li>Government processes</li>
+                <li>Youth & Education</li>
+            </ul>
+        </div>
+
+ <!-- Economics Section -->
+        <div id="economics" class="section">
+            <h2>Economics (Data-Driven Analysis)</h2>
+            <p>
+                Our economics section provides Zambians with deep, analytical insights on local and global economic trends, covering topics like:
+            </p>
+            <ul>
+                <li>GDP trends</li>
+                <li>Inflation</li>
+                <li>Entrepreneurship</li>
+                <li>Financial markets</li>
+                <li>Impact of economic policies on Zambians</li>
+            </ul>
+        </div>
+
+        <!-- Health Section -->
+        <div id="health" class="section">
+            <h2>Health (Data and Science-Based Insights)</h2>
+            <p>
+                The health section offers scientifically-backed information and data-driven reports on matters affecting Zambia and the wider world, including:
+            </p>
+            <ul>
+                <li>Health education</li>
+                <li>Disease prevention</li>
+                <li>Innovations in healthcare</li>
+                <li>Public health challenges</li>
+                <li>Sustainable healthcare systems in Zambia</li>
+            </ul>
+        </div>
+
+        <!-- Technology Section -->
+        <div id="technology" class="section">
+            <h2>Technology, Academics & Research</h2>
+            <p>
+                Our technology section explores advancements in tech and their implications for Zambia’s growth, including:
+            </p>
+            <ul>
+                <li>Digital technologies</li>
+                <li>Local research initiatives</li>
+                <li>Academic achievements</li>
+                <li>Research opportunities</li>
+            </ul>
+        </div>
+
+        <!-- Government Section -->
+        <div id="government" class="section">
+            <h2>Government & Civic Education</h2>
+            <p>
+                The government section is designed to educate Zambians about official processes, policies, and procedures. We cover:
+            </p>
+            <ul>
+                <li>Simplified civic information</li>
+                <li>Government policies</li>
+                <li>Citizen rights and responsibilities</li>
+                <li>Civic participation</li>
+            </ul>
+        </div>
+
+        <!-- Youth & Education Section -->
+        <div id="youth" class="section">
+            <h2>Youth & Education</h2>
+            <p>
+                This section focuses on issues that matter to young Zambians, including:
+            </p>
+            <ul>
+                <li>Educational resources</li>
+                <li>Career guidance</li>
+                <li>Mental health awareness</li>
+                <li>Youth empowerment</li>
+                <li>Social issues affecting young people</li>
+            </ul>
+        </div>
+
+        <!-- Cultural Section -->
+        <div id="culture" class="section">
+            <h2>Cultural Section</h2>
+            <p>
+                The cultural section celebrates Zambia’s rich cultural heritage and offers a look into:
+            </p>
+            <ul>
+                <li>Traditional Zambian sports and games</li>
+                <li>Unique physical, mental, and spiritual benefits of these games</li>
+                <li>Profiles of Zambian artists, musicians, and cultural leaders</li>
+                <li>Zambia's cultural heritage and traditions</li>
+                <li>How global culture influences Zambian traditions</li>
+            </ul>
+        </div>
+   
+
+        <!-- Editorial Guidelines Section -->
+        <div id="editorial" class="section">
+            <h2>Editorial Guidelines</h2>
+            <p>
+                Our editorial guidelines ensure that the content produced is:
+            </p>
+            <ul>
+                <li>Fact-based and well-researched</li>
+                <li>Neutral and free from political bias</li>
+                <li>Clear, concise, and accessible to a wide audience</li>
+                <li>Relevant to Zambian citizens and global topics</li>
+            </ul>
+        </div>
+
+        <!-- Code of Ethics Section -->
+        <div id="ethics" class="section">
+            <h2>Code of Ethics for Writers</h2>
+            <p>
+                All writers must adhere to the following ethical standards:
+            </p>
+            <ul>
+                <li>Integrity in reporting facts</li>
+                <li>Avoiding conflicts of interest</li>
+                <li>Maintaining confidentiality where necessary</li>
+                <li>Providing proper attribution for sources</li>
+                <li>Respecting the dignity of all individuals</li>
+            </ul>
+        </div>
+
+        <!-- Submission & Citation Section -->
+        <div id="submission" class="section">
+            <h2>Submission & Citation Guidelines</h2>
+            <p>
+                All submissions must follow these guidelines:
+            </p>
+            <ul>
+                <li>Original, unpublished content</li>
+                <li>Proper citations for any data or sources used</li>
+                <li>Adherence to our format and length requirements</li>
+                <li>Submissions via approved channels</li>
+            </ul>
+        </div>
+
+        <!-- Privacy Policy Section -->
+        <div id="privacy" class="section">
+            <h2>Privacy Policy</h2>
+            <p>
+                We take user privacy seriously and guarantee:
+            </p>
+            <ul>
+                <li>Protection of personal data</li>
+                <li>No sharing of data without consent</li>
+                <li>Secure data handling practices</li>
+                <li>Clear data retention policies</li>
+            </ul>
+        </div>
+
+        <!-- Terms & Conditions Section -->
+        <div id="terms" class="section">
+            <h2>Terms & Conditions</h2>
+            <p>
+                By accessing and using our platform, users agree to:
+            </p>
+            <ul>
+                <li>Respect our intellectual property</li>
+                <li>Comply with our content usage policies</li>
+                <li>Avoid unlawful activities while on the platform</li>
+            </ul>
+        </div>
+
+        <!-- Writer's Agreement Section -->
+        <div id="contract" class="section">
+            <h2>Writer's Agreement Contract</h2>
+            <p>
+                All writers are required to sign a contract agreeing to:
+            </p>
+            <ul>
+                <li>Produce original, non-plagiarized work</li>
+                <li>Adhere to editorial and ethical guidelines</li>
+                <li>Submit work by specified deadlines</li>
+                <li>Grant the platform exclusive publishing rights</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to show and hide sections
+    function showSection(sectionId) {
+        // Hide all sections
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.classList.remove('active');
+        });
+
+        // Show the selected section
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
